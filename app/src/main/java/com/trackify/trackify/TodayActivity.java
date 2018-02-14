@@ -48,7 +48,7 @@ public class TodayActivity extends Activity {
         ActivityItem activityItem6 = findViewById(R.id.activity_6);
         activityItem6.setData(ActivityItem.Type.TRANSPORT, "45 min | 17:47 - 18:32");
         ActivityItem activityItem7 = findViewById(R.id.activity_7);
-        activityItem7.setData(ActivityItem.Type.HOME, "");
+        activityItem7.setData(ActivityItem.Type.HOME, "4h 20 min | 18:32 - 22:52");
     }
 
     private void onMapButtonClicked() {
@@ -60,10 +60,12 @@ public class TodayActivity extends Activity {
     private void onTab2Clicked() {
         Intent intent = new Intent(this, StatsActivity.class);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 
     private void onTab3Clicked() {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 }
