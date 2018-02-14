@@ -55,48 +55,84 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
+        android:gravity="center"
         android:weightSum="3">
 
-        <TextView
+        <LinearLayout
             android:id="@+id/tab_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="TODAY"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="21sp"
-            android:background="@color/blue"/>
+            android:background="@color/blue"
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <TextView
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_today"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/tab_2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="STATS"
-            android:textSize="21sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
             android:background="@color/blue_dark"
-            />
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <TextView
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_chart"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STATS"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/tab_3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="SETTINGS"
-            android:textSize="21sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
             android:background="@color/blue"
-            />
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_settings"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SETTINGS"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                />
+
+        </LinearLayout>
+
 
     </LinearLayout>
-
 </RelativeLayout>

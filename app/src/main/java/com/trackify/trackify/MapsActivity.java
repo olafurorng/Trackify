@@ -1,5 +1,6 @@
 package com.trackify.trackify;
 
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -7,8 +8,12 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -38,9 +43,47 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // Create coordinates for home and DTU
+        LatLng dtu = new LatLng(55.785637, 12.521382);
+        LatLng home = new LatLng(55.709824, 12.572348);
+
+        //Add circle and marker for DTU
+        mMap.addCircle(new CircleOptions()
+                .center(dtu)
+                .radius(1000)
+                .strokeColor(Color.RED)
+                .fillColor(0x330000FF));
+        mMap.addMarker(new MarkerOptions()
+                .position(dtu)
+                .title("University")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_school_black_36dp))
+                .anchor(.5f,.5f));
+
+        //Add circle and marker for home
+        mMap.addCircle(new CircleOptions()
+                .center(home)
+                .radius(300)
+                .strokeColor(Color.RED)
+                .fillColor(0x330000FF));
+        mMap.addMarker(new MarkerOptions()
+                .position(home)
+                .title("Home")
+        .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_home_black_36dp))
+        .anchor(.5f,.5f));
+
+        //Create polyline
+        mMap.addPolyline(new PolylineOptions()
+                .clickable(false)
+                .add(new LatLng(55.709824, 12.572348)
+                        ,new LatLng(55.714552, 12.558977)
+                        ,new LatLng(55.764217, 12.520590)
+                        ,new LatLng(55.785637, 12.521382)
+                        ,new LatLng(55.728385, 12.441790)
+                        ,new LatLng(55.696614, 12.523890))
+                .color(Color.BLUE));
+
+        //Adjust camera
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(home));
+        mMap.setMinZoomPreference(10);
     }
 }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    
+    <RelativeLayout
+        android:id="@+id/timeline"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:id="@+id/timeline_icon_container"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/activity_icon_background"/>
+
+            <ImageView
+                android:id="@+id/timeline_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/train"/>
+        </RelativeLayout>
+        
+
+
+
+        
+    </RelativeLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/timeline"
+        android:paddingLeft="80dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="22 min | 9:14 - 9:36 AM"/>
+
+        <TextView
+            android:id="@+id/activity_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transport"/>
+        
+    </LinearLayout>
+    
+    
+    
+  
+
+</RelativeLayout>
