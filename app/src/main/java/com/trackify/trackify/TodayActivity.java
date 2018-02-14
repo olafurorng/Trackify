@@ -44,7 +44,7 @@ public class TodayActivity extends Activity {
         ActivityItem activityItem4 = findViewById(R.id.activity_4);
         activityItem4.setData(ActivityItem.Type.STUDYING, "7h 12 min | 8:53 - 16:35");
         ActivityItem activityItem5 = findViewById(R.id.activity_5);
-        activityItem5.setData(ActivityItem.Type.WALKING, "12 min | 16:35 - 17:47");
+        activityItem5.setData(ActivityItem.Type.BIKING, "12 min | 16:35 - 17:47");
         ActivityItem activityItem6 = findViewById(R.id.activity_6);
         activityItem6.setData(ActivityItem.Type.TRANSPORT, "45 min | 17:47 - 18:32");
         ActivityItem activityItem7 = findViewById(R.id.activity_7);

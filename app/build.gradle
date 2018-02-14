@@ -19,6 +19,8 @@ android {
 }
 
 dependencies {
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.0.2'
     implementation 'com.google.android.gms:play-services-maps:11.8.0'

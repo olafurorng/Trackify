@@ -71,20 +71,20 @@ public class ActivityItem extends RelativeLayout {
             case BIKING:
                 this.icon.setImageDrawable(getResources().getDrawable(R.drawable.bicycle));
                 this.activityDesciption.setText("Biking");
-                this.iconContainer.getLayoutParams().height = 170;
-                this.iconContainer.getLayoutParams().width = 170;
+                this.iconContainer.getLayoutParams().height = 165;
+                this.iconContainer.getLayoutParams().width = 165;
                 break;
             case WALKING:
                 this.icon.setImageDrawable(getResources().getDrawable(R.drawable.walking));
                 this.activityDesciption.setText("Walking");
-                this.iconContainer.getLayoutParams().height = 170;
-                this.iconContainer.getLayoutParams().width = 170;
+                this.iconContainer.getLayoutParams().height = 165;
+                this.iconContainer.getLayoutParams().width = 165;
                 break;
             case TRANSPORT:
                 this.icon.setImageDrawable(getResources().getDrawable(R.drawable.train));
                 this.activityDesciption.setText("Transport");
-                this.iconContainer.getLayoutParams().height =  170;
-                this.iconContainer.getLayoutParams().width = 170;
+                this.iconContainer.getLayoutParams().height =  165;
+                this.iconContainer.getLayoutParams().width = 165;
                 break;
             case STUDYING:
                 this.icon.setImageDrawable(getResources().getDrawable(R.drawable.book));
