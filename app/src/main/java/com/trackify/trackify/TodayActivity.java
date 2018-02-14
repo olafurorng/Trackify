@@ -15,6 +15,12 @@ public class TodayActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_today);
 
+        findViewById(R.id.mapViewButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onMapButtonClicked();
+            }
+        });
 
         findViewById(R.id.tab_2).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +49,11 @@ public class TodayActivity extends Activity {
         activityItem6.setData(ActivityItem.Type.TRANSPORT, "45 min | 17:47 - 18:32");
         ActivityItem activityItem7 = findViewById(R.id.activity_7);
         activityItem7.setData(ActivityItem.Type.HOME, "");
+    }
+
+    private void onMapButtonClicked() {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
 
 

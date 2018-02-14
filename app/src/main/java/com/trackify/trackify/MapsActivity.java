@@ -1,8 +1,10 @@
 package com.trackify.trackify;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,6 +24,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        findViewById(R.id.tab_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onTab2Clicked();
+            }
+        });
+        findViewById(R.id.tab_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onTab3Clicked();
+            }
+        });
+        findViewById(R.id.listViewButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onListButtonClicked();
+            }
+        });
+
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -85,5 +107,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //Adjust camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(home));
         mMap.setMinZoomPreference(10);
+    }
+
+    private void onListButtonClicked() {
+        Intent intent = new Intent(this, TodayActivity.class);
+        startActivity(intent);
+    }
+
+    private void onTab2Clicked() {
+        Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
+
+    private void onTab3Clicked() {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 }
