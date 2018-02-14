@@ -30,10 +30,12 @@ public class SettingsActivity extends Activity {
     private void onTab1Clicked() {
         Intent intent = new Intent(this, TodayActivity.class);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 
     private void onTab2Clicked() {
         Intent intent = new Intent(this, StatsActivity.class);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 }
