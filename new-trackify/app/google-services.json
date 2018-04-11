@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "226759139540",
+    "firebase_url": "https://trackify-cec30.firebaseio.com",
+    "project_id": "trackify-cec30",
+    "storage_bucket": "trackify-cec30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226759139540:android:fa73358c55893aae",
+        "android_client_info": {
+          "package_name": "dk.dtu.trackify.trackify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226759139540-r6iqvc81edvs2r0eeknk4b47fkcrr3nc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsBxJjqI1Oc6iyF2vY8jOne7P1wzBM1Cs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
