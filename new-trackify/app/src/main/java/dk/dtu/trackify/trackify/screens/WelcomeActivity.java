@@ -26,6 +26,9 @@ public class WelcomeActivity extends AppCompatActivity {
                 String name = nameEditText.getText().toString();
                 MainApplication mainApplication = (MainApplication) getApplication();
                 mainApplication.addUser(name, WelcomeActivity.this);
+
+                findViewById(R.id.progress_bar).setVisibility(View.VISIBLE);
+                findViewById(R.id.welcome_button).setVisibility(View.GONE);
             }
         });
 
@@ -38,9 +41,9 @@ public class WelcomeActivity extends AppCompatActivity {
         // check if user has already signed up
         SharedPreferences prefs = getSharedPreferences("Trackify", MODE_PRIVATE);
         boolean hasSignedUp = prefs.getBoolean("signup", false);
-        Log.d("olaf", "" + hasSignedUp);
+        Log.d(WelcomeActivity.class.getSimpleName(), "Has signed up: " + hasSignedUp);
         if (hasSignedUp) {
-      //      // opening the overview screen
+            // opening the overview screen
             Intent intent = new Intent(this, OverviewActivity.class);
             startActivity(intent);
         }

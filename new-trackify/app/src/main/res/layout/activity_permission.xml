@@ -7,21 +7,27 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".screens.WelcomeActivity">
+    
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/settings_wheel"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Trackify!"
+        android:text="App Usage Permission"
         android:textSize="22sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="In Trackify you can see all your app usages down to details! Trackify will also send you useful information about your app usage compared to other people."
+        android:text="To use the app you have to grant a permission to allow the app to get app usage data"
         android:textSize="14sp"
         android:gravity="center"
         android:layout_marginLeft="10dp"
@@ -29,53 +35,42 @@
         android:layout_marginTop="5dp"
         />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your full name"
+        android:text="1. Open Settings on your phone and search for 'Usage data access'"
+        android:textSize="16sp"
+        android:gravity="center"
         android:textStyle="bold"
-        android:textSize="14sp"
-        android:gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
         />
-
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:lines="1"
-        android:minWidth="120dp"
-        android:layout_marginBottom="60dp"/>
-
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your name and app usage data will be shared with Trackify. All data will be deleted after 3 weeks and not shared with others."
-        android:textColor="@color/lightgray"
-        android:layout_marginBottom="5dp"
-        android:textSize="11sp"
+        android:text="2. Select the Trackify app and allow usage tracking"
+        android:textSize="16sp"
         android:gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
         />
 
-    <Button
-        android:id="@+id/welcome_button"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"/>
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:visibility="gone"/>
-
+        android:text="3. Open this app again 👍"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        />
 
 
 </LinearLayout>
